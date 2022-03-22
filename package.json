@@ -71,6 +71,7 @@
     ]
   },
   "dependencies": {
+    "@volar/vue-language-service-types": "^0.33.6",
     "@vue/compiler-sfc": "^3.2.31",
     "@vue/reactivity": "^3.2.31"
   }
