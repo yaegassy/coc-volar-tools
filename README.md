@@ -28,6 +28,22 @@ Plug 'yaegassy/coc-volar-tools', {'do': 'yarn install --frozen-lockfile'}
 
 - `volar.action.splitEditors`: Split `<script>`, `<template>`, `<style>` Editors
 
+## Volar Language Service Plugin
+
+### prettier-html
+
+**volar.config.js**:
+
+`/PATH/TO` should be adjusted in your environment.
+
+```javascript
+module.exports = {
+  plugins: [
+    require("/PATH/TO/coc/extensions/node_modules/@yaegassy/coc-volar-tools/lib/plugins/prettier-html").default(),
+  ],
+};
+```
+
 ## License
 
 MIT
