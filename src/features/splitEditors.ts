@@ -89,7 +89,8 @@ export async function activate(context: ExtensionContext) {
     let currentSplitCount = 0;
 
     if (scriptBlocks.length >= 1) {
-      await workspace.jumpTo(doc.textDocument.uri, Position.create(scriptBlocks[0].start, scriptBlocks[0].end));
+      // positon is 0-based, so it does -1
+      await workspace.jumpTo(doc.textDocument.uri, Position.create(scriptBlocks[0].start - 1, scriptBlocks[0].end - 1));
 
       if (templateBlocks.length >= 1) await foldingSFCBlock(templateBlocks);
       if (styleBlocks.length >= 1) await foldingSFCBlock(styleBlocks);
@@ -100,7 +101,11 @@ export async function activate(context: ExtensionContext) {
     }
 
     if (templateBlocks.length >= 1) {
-      await workspace.jumpTo(doc.textDocument.uri, Position.create(templateBlocks[0].start, templateBlocks[0].end));
+      // positon is 0-based, so it does -1
+      await workspace.jumpTo(
+        doc.textDocument.uri,
+        Position.create(templateBlocks[0].start - 1, templateBlocks[0].end - 1)
+      );
 
       if (scriptBlocks.length >= 1) await foldingSFCBlock(scriptBlocks);
       if (styleBlocks.length >= 1) await foldingSFCBlock(styleBlocks);
@@ -111,7 +116,8 @@ export async function activate(context: ExtensionContext) {
     }
 
     if (styleBlocks.length >= 1) {
-      await workspace.jumpTo(doc.textDocument.uri, Position.create(styleBlocks[0].start, styleBlocks[0].end));
+      // positon is 0-based, so it does -1
+      await workspace.jumpTo(doc.textDocument.uri, Position.create(styleBlocks[0].start - 1, styleBlocks[0].end - 1));
 
       if (scriptBlocks.length >= 1) await foldingSFCBlock(scriptBlocks);
       if (templateBlocks.length >= 1) await foldingSFCBlock(templateBlocks);
@@ -122,7 +128,8 @@ export async function activate(context: ExtensionContext) {
     }
 
     if (customBlocks.length >= 1) {
-      await workspace.jumpTo(doc.textDocument.uri, Position.create(customBlocks[0].start, customBlocks[0].end));
+      // positon is 0-based, so it does -1
+      await workspace.jumpTo(doc.textDocument.uri, Position.create(customBlocks[0].start - 1, customBlocks[0].end - 1));
 
       if (scriptBlocks.length >= 1) await foldingSFCBlock(scriptBlocks);
       if (templateBlocks.length >= 1) await foldingSFCBlock(templateBlocks);
