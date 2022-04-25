@@ -44,6 +44,23 @@ export async function activate(context: coc.ExtensionContext) {
     return cache.sfc;
   }
 
+  context.subscriptions.push(
+    coc.commands.registerCommand('volar.action.vite', async () => {
+      const editor = coc.window.activeTextEditor;
+      if (editor) {
+        openPreview(uriToFsPath(editor.document.uri), 'vite');
+      }
+    })
+  );
+  context.subscriptions.push(
+    coc.commands.registerCommand('volar.action.nuxt', async () => {
+      const editor = coc.window.activeTextEditor;
+      if (editor) {
+        openPreview(uriToFsPath(editor.document.uri), 'nuxt');
+      }
+    })
+  );
+
   async function openPreview(fileName: string, mode: 'vite' | 'nuxt') {
     const configFile = await getConfigFile(fileName, mode);
     if (!configFile) return;
