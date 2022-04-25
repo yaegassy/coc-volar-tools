@@ -107,7 +107,10 @@ export async function activate(context: coc.ExtensionContext) {
       const end = doc.textDocument.positionAt(range[1] + offset);
 
       // TODO
-      coc.workspace.jumpTo(doc.uri, start);
+      //coc.workspace.jumpTo(doc.uri, start);
+      coc.workspace.nvim.call('cursor', [start.line + 1, start.character + 1]);
+      coc.workspace.nvim.command('normal! v');
+      coc.workspace.nvim.call('cursor', [end.line + 1, end.character + 1]);
     }
   }
 
