@@ -39,7 +39,7 @@
     "@types/node": "^16.11.26",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
-    "coc.nvim": "^0.0.81-next.22",
+    "coc.nvim": "0.0.81-next.24",
     "esbuild": "^0.14.24",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
@@ -60,6 +60,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable coc-volar-tools extension"
+        },
+        "volar.preview.port": {
+          "type": "number",
+          "default": 3333,
+          "description": "Default port for preview server"
         }
       }
     },
@@ -68,10 +73,22 @@
         "command": "volar.action.splitEditors",
         "title": "Split <script>, <template>, <style> Editors",
         "category": "Volar"
+      },
+      {
+        "command": "volar.action.vite",
+        "title": "Experimental Features for Vite",
+        "category": "Volar"
+      },
+      {
+        "command": "volar.action.nuxt",
+        "title": "Experimental Features for Nuxt",
+        "category": "Volar"
       }
     ]
   },
   "dependencies": {
+    "@volar/preview": "0.34.10-patch.1",
+    "@volar/shared": "0.34.10",
     "@volar/vue-language-service-types": "^0.33.6",
     "@vue/compiler-sfc": "^3.2.31",
     "@vue/reactivity": "^3.2.31"
