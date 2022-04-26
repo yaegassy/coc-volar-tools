@@ -73,6 +73,16 @@
         "command": "volar.action.splitEditors",
         "title": "Split <script>, <template>, <style> Editors",
         "category": "Volar"
+      },
+      {
+        "command": "volar.action.vite",
+        "title": "Experimental Features for Vite",
+        "category": "Volar"
+      },
+      {
+        "command": "volar.action.nuxt",
+        "title": "Experimental Features for Nuxt",
+        "category": "Volar"
       }
     ]
   },
