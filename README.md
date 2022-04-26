@@ -28,6 +28,8 @@ https://user-images.githubusercontent.com/188642/165208266-c21ed952-b930-46d1-8a
 
 ### "volar.action.vite" command
 
+Press `Alt` to use go to code in Browser
+
 https://user-images.githubusercontent.com/188642/165208322-3d15df88-0701-4ed7-91bb-adcc87ff2b99.mp4
 
 ## Configuration options
