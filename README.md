@@ -23,10 +23,13 @@ Plug 'yaegassy/coc-volar-tools', {'do': 'yarn install --frozen-lockfile'}
 ## Configuration options
 
 - `volar-tools.enable`: Enable coc-volar-tools extension, default: `true`
+- `volar.preview.port`: Default port for component preview server, default: `3333`
 
 ## Commands
 
 - `volar.action.splitEditors`: Split `<script>`, `<template>`, `<style>` Editors
+- `volar.action.vite`: Experimental Features for Vite
+- `volar.action.nuxt`: Experimental Features for Nuxt
 
 ## License
 
