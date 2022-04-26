@@ -60,6 +60,11 @@
           "type": "boolean",
           "default": true,
           "description": "Enable coc-volar-tools extension"
+        },
+        "volar.preview.port": {
+          "type": "number",
+          "default": 3333,
+          "description": "Default port for component preview server."
         }
       }
     },
@@ -72,7 +77,7 @@
     ]
   },
   "dependencies": {
-    "@volar/preview": "0.34.10",
+    "@volar/preview": "0.34.10-patch.1",
     "@volar/shared": "0.34.10",
     "@volar/vue-language-service-types": "^0.33.6",
     "@vue/compiler-sfc": "^3.2.31",
