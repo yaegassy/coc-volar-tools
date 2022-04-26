@@ -31,6 +31,10 @@ Plug 'yaegassy/coc-volar-tools', {'do': 'yarn install --frozen-lockfile'}
 - `volar.action.vite`: Experimental Features for Vite
 - `volar.action.nuxt`: Experimental Features for Nuxt
 
+## Thanks
+
+- [johnsoncodehk/volar](https://github.com/johnsoncodehk/volar)
+
 ## License
 
 MIT
