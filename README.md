@@ -23,7 +23,7 @@ Plug 'yaegassy/coc-volar-tools', {'do': 'yarn install --frozen-lockfile'}
 ## Configuration options
 
 - `volar-tools.enable`: Enable coc-volar-tools extension, default: `true`
-- `volar.preview.port`: Default port for component preview server, default: `3333`
+- `volar.preview.port`: Default port for preview server, default: `3333`
 
 ## Commands
 
