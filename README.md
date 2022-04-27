@@ -42,6 +42,7 @@ https://user-images.githubusercontent.com/188642/165208322-3d15df88-0701-4ed7-91
 - `volar.action.splitEditors`: Split `<script>`, `<template>`, `<style>` Editors
 - `volar.action.vite`: Experimental Features for Vite
 - `volar.action.nuxt`: Experimental Features for Nuxt
+- `volar.action.previewToggleHighlightDomElements`: Toggle preview highlighting enable/disable
 
 ## Thanks
 

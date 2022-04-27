@@ -7,10 +7,12 @@ import * as path from 'path';
 
 export async function activate(context: coc.ExtensionContext) {
   let ws: ReturnType<typeof preview.createPreviewWebSocket> | undefined;
+  let highlightDomElements = true;
 
   if (coc.window.terminals.some((terminal) => terminal.name.startsWith('volar-preview:'))) {
     ws = preview.createPreviewWebSocket({
       goToCode: handleGoToCode,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       getOpenFileUrl: (fileName, range) => 'vscode://files:/' + fileName,
     });
   }
@@ -18,11 +20,12 @@ export async function activate(context: coc.ExtensionContext) {
     if (e.name.startsWith('volar-preview:')) {
       ws = preview.createPreviewWebSocket({
         goToCode: handleGoToCode,
-        // TODO: same to line 19
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         getOpenFileUrl: (fileName, range) => 'vscode://files:/' + fileName,
       });
     }
   });
+
   coc.window.onDidCloseTerminal((e) => {
     if (e.name.startsWith('volar-preview:')) {
       ws?.stop();
@@ -52,6 +55,7 @@ export async function activate(context: coc.ExtensionContext) {
       }
     })
   );
+
   context.subscriptions.push(
     coc.commands.registerCommand('volar.action.nuxt', async () => {
       const editor = coc.window.activeTextEditor;
@@ -60,6 +64,62 @@ export async function activate(context: coc.ExtensionContext) {
       }
     })
   );
+
+  coc.events.on(
+    'CursorMoved',
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    async (e) => {
+      const mode = (await coc.workspace.nvim.call('mode')) as string;
+      if (coc.window.activeTextEditor && mode === 'v') {
+        updateSelectionHighlights(coc.window.activeTextEditor);
+      }
+    },
+    null,
+    context.subscriptions
+  );
+
+  context.subscriptions.push(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    coc.workspace.onDidChangeTextDocument((e) => {
+      if (coc.window.activeTextEditor) {
+        updateSelectionHighlights(coc.window.activeTextEditor);
+      }
+    })
+  );
+  context.subscriptions.push(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    coc.workspace.onDidSaveTextDocument((e) => {
+      if (coc.window.activeTextEditor) {
+        updateSelectionHighlights(coc.window.activeTextEditor);
+      }
+    })
+  );
+
+  coc.commands.registerCommand('volar.action.previewToggleHighlightDomElements', () => {
+    highlightDomElements = !highlightDomElements;
+    if (coc.window.activeTextEditor) {
+      updateSelectionHighlights(coc.window.activeTextEditor);
+      coc.window.showInformationMessage(`previewToggleHighlightDomElements: ${highlightDomElements}`);
+    }
+  });
+
+  function updateSelectionHighlights(textEditor: coc.TextEditor) {
+    if (ws && textEditor.document.languageId === 'vue' && highlightDomElements) {
+      const sfc = getSfc(textEditor.document);
+      const offset = sfc.descriptor.template?.loc.start.offset ?? 0;
+      const selections = textEditor.visibleRanges;
+      ws?.highlight(
+        uriToFsPath(textEditor.document.uri),
+        selections.map((selection) => ({
+          start: textEditor.document.getOffset(selection.start.line, selection.start.character) - offset,
+          end: textEditor.document.getOffset(selection.end.line, selection.end.character) - offset,
+        })),
+        textEditor.document.dirty
+      );
+    } else {
+      ws?.unhighlight();
+    }
+  }
 
   async function openPreview(fileName: string, mode: 'vite' | 'nuxt') {
     const configFile = await getConfigFile(fileName, mode);
@@ -94,11 +154,6 @@ export async function activate(context: coc.ExtensionContext) {
 
     if (cancleToken.isCancelled) return;
 
-    // TODO: need to call show document after openTextDocument?
-    ////await coc.window.showTextDocument(doc, coc.ViewColumn.One);
-
-    if (cancleToken.isCancelled) return;
-
     const editor = coc.window.activeTextEditor;
     if (editor) {
       const sfc = getSfc(doc);
@@ -106,8 +161,6 @@ export async function activate(context: coc.ExtensionContext) {
       const start = doc.textDocument.positionAt(range[0] + offset);
       const end = doc.textDocument.positionAt(range[1] + offset);
 
-      // TODO
-      //coc.workspace.jumpTo(doc.uri, start);
       coc.workspace.nvim.call('cursor', [start.line + 1, start.character + 1]);
       coc.workspace.nvim.command('normal! v');
       coc.workspace.nvim.call('cursor', [end.line + 1, end.character + 1]);
