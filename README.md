@@ -30,7 +30,9 @@ https://user-images.githubusercontent.com/188642/165208266-c21ed952-b930-46d1-8a
 
 Press `Alt` to use go to code in Browser
 
-https://user-images.githubusercontent.com/188642/165208322-3d15df88-0701-4ed7-91bb-adcc87ff2b99.mp4
+https://user-images.githubusercontent.com/188642/165452459-2bf6787c-ccfc-4ed6-9042-6e36e39cfb58.mp4
+
+The `volar.action.nuxt` command has the same behavior.
 
 ## Configuration options
 
