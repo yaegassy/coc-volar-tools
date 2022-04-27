@@ -83,6 +83,11 @@
         "command": "volar.action.nuxt",
         "title": "Experimental Features for Nuxt",
         "category": "Volar"
+      },
+      {
+        "command": "volar.action.previewToggleHighlightDomElements",
+        "title": "Toggle preview highlighting enable/disable",
+        "category": "Volar"
       }
     ]
   },
