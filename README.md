@@ -1,6 +1,6 @@
 # coc-volar-tools
 
-## What' coc-volar-tools?
+## What's coc-volar-tools?
 
 This [coc.nvim](https://github.com/neoclide/coc.nvim) extension provides feature split from [coc-volar](https://github.com/yaegassy/coc-volar). split into a separate coc-extension due to the large package size used, etc.
 
