@@ -147,12 +147,12 @@
     "@typescript-eslint/types" "5.27.0"
     eslint-visitor-keys "^3.3.0"
 
-"@volar/preview@0.34.10-patch.1":
-  version "0.34.10-patch.1"
-  resolved "https://registry.yarnpkg.com/@volar/preview/-/preview-0.34.10-patch.1.tgz#bd90c4850901bd411aef98171d23e2aef15ebf2e"
-  integrity sha512-VGXc7uBSHawPLB6hUsyuFjjK3li+vH2o2kJtSvHbvVUin+dqhbW7vSRqd7f4BT6vf9iGfPCLKnMKu/y6YEG6KA==
+"@volar/preview@0.36.0":
+  version "0.36.0"
+  resolved "https://registry.yarnpkg.com/@volar/preview/-/preview-0.36.0.tgz#0fc2646de1adae818bfc163c0d0bbaf76a02bd8c"
+  integrity sha512-MYjvXEZaOX5jW69Uqrra9jbHKEIUJiTLjlzH9Ic+djQLTKeIEGj5rfGAEDkvHB8u00d5xzgiVMU1a1dsZK0YSg==
   dependencies:
-    ws "^8.5.0"
+    ws "^8.7.0"
 
 "@volar/shared@0.34.10":
   version "0.34.10"
@@ -1181,10 +1181,10 @@ wrappy@1:
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
-ws@^8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-8.5.0.tgz#bfb4be96600757fe5382de12c670dab984a1ed4f"
-  integrity sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==
+ws@^8.7.0:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.7.0.tgz#eaf9d874b433aa00c0e0d8752532444875db3957"
+  integrity sha512-c2gsP0PRwcLFzUiA8Mkr37/MI7ilIlHQxaEAtd0uNMbVMoy8puJyafRlm0bV9MbGSabUPeLrRRaqIBcFcA2Pqg==
 
 yallist@^4.0.0:
   version "4.0.0"
