@@ -94,7 +94,7 @@
   "dependencies": {
     "@volar/preview": "0.36.0",
     "@volar/shared": "0.36.0",
-    "@volar/vue-language-service-types": "^0.33.6",
+    "@volar/vue-language-service-types": "0.36.0",
     "@vue/compiler-sfc": "^3.2.36",
     "@vue/reactivity": "^3.2.36"
   }
