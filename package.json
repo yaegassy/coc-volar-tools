@@ -96,6 +96,6 @@
     "@volar/shared": "0.36.0",
     "@volar/vue-language-service-types": "0.36.0",
     "@vue/compiler-sfc": "^3.2.37",
-    "@vue/reactivity": "^3.2.36"
+    "@vue/reactivity": "^3.2.37"
   }
 }

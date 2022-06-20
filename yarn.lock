@@ -225,17 +225,12 @@
     estree-walker "^2.0.2"
     magic-string "^0.25.7"
 
-"@vue/reactivity@^3.2.36":
-  version "3.2.36"
-  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.2.36.tgz#026b14e716febffe80cd284fd8a2b33378968646"
-  integrity sha512-c2qvopo0crh9A4GXi2/2kfGYMxsJW4tVILrqRPydVGZHhq0fnzy6qmclWOhBFckEhmyxmpHpdJtIRYGeKcuhnA==
+"@vue/reactivity@^3.2.37":
+  version "3.2.37"
+  resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.2.37.tgz#5bc3847ac58828e2b78526e08219e0a1089f8848"
+  integrity sha512-/7WRafBOshOc6m3F7plwzPeCu/RCVv9uMpOwa/5PiY1Zz+WLVRWiy0MYKwmg19KBdGtFWsmZ4cD+LOdVPcs52A==
   dependencies:
-    "@vue/shared" "3.2.36"
-
-"@vue/shared@3.2.36":
-  version "3.2.36"
-  resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.36.tgz#35e11200542cf29068ba787dad57da9bdb82f644"
-  integrity sha512-JtB41wXl7Au3+Nl3gD16Cfpj7k/6aCroZ6BbOiCMFCMvrOpkg/qQUXTso2XowaNqBbnkuGHurLAqkLBxNGc1hQ==
+    "@vue/shared" "3.2.37"
 
 "@vue/shared@3.2.37":
   version "3.2.37"
