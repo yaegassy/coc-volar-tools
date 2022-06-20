@@ -147,27 +147,27 @@
     "@typescript-eslint/types" "5.28.0"
     eslint-visitor-keys "^3.3.0"
 
-"@volar/preview@0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@volar/preview/-/preview-0.36.0.tgz#0fc2646de1adae818bfc163c0d0bbaf76a02bd8c"
-  integrity sha512-MYjvXEZaOX5jW69Uqrra9jbHKEIUJiTLjlzH9Ic+djQLTKeIEGj5rfGAEDkvHB8u00d5xzgiVMU1a1dsZK0YSg==
+"@volar/preview@^0.38.1":
+  version "0.38.1"
+  resolved "https://registry.yarnpkg.com/@volar/preview/-/preview-0.38.1.tgz#d7940a5a084f4f0f21228752a3fbcef6947f5a14"
+  integrity sha512-x2vkFNOvTCZMzbJTeUV3WhqwR2NATXVP1BPjG7zIYQPdIJ3cQhqdqfvwMBFHu3XNGUzgAxtHCvC8VYzVAsXTBA==
   dependencies:
     ws "^8.7.0"
 
-"@volar/shared@0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@volar/shared/-/shared-0.36.0.tgz#aba3bf3dc27f5f7afae5395e76795d56227eec37"
-  integrity sha512-PuUA81DU75t9pMV1Bdj7i0Uliw/v6PclQ+c8xt4/Ak21o0lyqIsbNrJP1BMGVC8HJcd/9ooa28SoV6enfo8ZKw==
+"@volar/shared@^0.38.1":
+  version "0.38.1"
+  resolved "https://registry.yarnpkg.com/@volar/shared/-/shared-0.38.1.tgz#2856d1717ffb1da2cb772b69b4bfa74f2e2d1c32"
+  integrity sha512-vQFe57QbGWOeSG3lQzUtV5UBI55vJK8NeGu6PIf81jEen1DC2NoRUrwO3VHI9tNdEaW87JDOitW/chCQTzC68g==
   dependencies:
     upath "^2.0.1"
     vscode-languageserver-protocol "^3.17.1"
     vscode-languageserver-textdocument "^1.0.4"
     vscode-uri "^3.0.3"
 
-"@volar/vue-language-service-types@0.36.0":
-  version "0.36.0"
-  resolved "https://registry.yarnpkg.com/@volar/vue-language-service-types/-/vue-language-service-types-0.36.0.tgz#5e69c1673bcc8eb38e78478abece3ceb5aa17f49"
-  integrity sha512-DHKX4WEb9KBMeUi0efYo16KTn3vPpvUrVMO5RpvhIcBQPBzehk++yVDpirs0Myrq0eokmZ1OoK9kJ2aeB5iKhA==
+"@volar/vue-language-service-types@^0.38.1":
+  version "0.38.1"
+  resolved "https://registry.yarnpkg.com/@volar/vue-language-service-types/-/vue-language-service-types-0.38.1.tgz#88147bcc924a575bd3ef78752abcd8e199054776"
+  integrity sha512-azaUut4hUVWdVUQ+SFkV51AP0Oz0WxASlyUiyQATx99O2YOc0bRSYDWR30yeV4zCcJHABVbx7JxxaJPywmRYTA==
   dependencies:
     vscode-languageserver-protocol "^3.17.1"
     vscode-languageserver-textdocument "^1.0.4"
