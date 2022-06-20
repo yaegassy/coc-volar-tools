@@ -1,6 +1,6 @@
-import { commands, ExtensionContext, Position, window, workspace } from 'coc.nvim';
 import { parse, SFCBlock } from '@vue/compiler-sfc';
 import { computed, ref } from '@vue/reactivity';
+import { commands, ExtensionContext, Position, window, workspace } from 'coc.nvim';
 
 interface CocVolarSFCBlock {
   lang: string | undefined;
