@@ -6,22 +6,22 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 export async function activate(context: coc.ExtensionContext) {
-  let ws: ReturnType<typeof preview.createPreviewWebSocket> | undefined;
+  let ws: ReturnType<typeof preview.createPreviewConnection> | undefined;
   let highlightDomElements = true;
 
   if (coc.window.terminals.some((terminal) => terminal.name.startsWith('volar-preview:'))) {
-    ws = preview.createPreviewWebSocket({
-      goToCode: handleGoToCode,
+    ws = preview.createPreviewConnection({
+      onGotoCode: handleGoToCode,
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      getOpenFileUrl: (fileName, range) => 'vscode://files:/' + fileName,
+      getFileHref: (fileName, range) => 'vscode://files:/' + fileName,
     });
   }
   coc.window.onDidOpenTerminal((e) => {
     if (e.name.startsWith('volar-preview:')) {
-      ws = preview.createPreviewWebSocket({
-        goToCode: handleGoToCode,
+      ws = preview.createPreviewConnection({
+        onGotoCode: handleGoToCode,
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        getOpenFileUrl: (fileName, range) => 'vscode://files:/' + fileName,
+        getFileHref: (fileName, range) => 'vscode://files:/' + fileName,
       });
     }
   });
