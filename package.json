@@ -63,7 +63,7 @@
         },
         "volar.preview.port": {
           "type": "number",
-          "default": 3333,
+          "default": 3334,
           "description": "Default port for preview server"
         }
       }
