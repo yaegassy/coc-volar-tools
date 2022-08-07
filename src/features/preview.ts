@@ -168,9 +168,7 @@ export async function activate(context: coc.ExtensionContext) {
   }
 
   async function startPreviewServer(viteDir: string, type: 'vite' | 'nuxt') {
-    const port = await shared.getLocalHostAvaliablePort(
-      coc.workspace.getConfiguration('volar').get('preview.port') ?? 3334
-    );
+    const port = await shared.getLocalHostAvaliablePort(coc.workspace.getConfiguration('volar').get('preview.port')!);
     const terminal = await coc.window.createTerminal({ name: 'volar-preview:' + port });
     const viteProxyPath =
       type === 'vite'
