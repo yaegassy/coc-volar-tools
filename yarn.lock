@@ -147,10 +147,10 @@
     "@typescript-eslint/types" "5.30.7"
     eslint-visitor-keys "^3.3.0"
 
-"@volar/preview@^0.39.4":
-  version "0.39.4"
-  resolved "https://registry.yarnpkg.com/@volar/preview/-/preview-0.39.4.tgz#2a4651a0c397d4dba725c60d05270b1f31b2585e"
-  integrity sha512-wNccDSTpur35tVoXuMjGAj0V2PsMhQAJVa7qCnEklCoLsnBvTQTv/O3afUgnS/Uh8v4qhtKE1UC8xwAlUQJBdw==
+"@volar/preview@^0.39.5":
+  version "0.39.5"
+  resolved "https://registry.yarnpkg.com/@volar/preview/-/preview-0.39.5.tgz#d40f4e691b4c6348a42328b1e63dadc729346558"
+  integrity sha512-6VJGk+onrE5l4GngswFLVjpnnRZ/m6r5byZPahZyZgr7GZcFvb54BKrdtJlSVRdVV7VQCf+Mwp+wGOzhdaxfYw==
   dependencies:
     ws "^8.8.1"
 
