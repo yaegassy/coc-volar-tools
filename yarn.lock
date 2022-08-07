@@ -154,20 +154,20 @@
   dependencies:
     ws "^8.8.1"
 
-"@volar/shared@0.39.4":
-  version "0.39.4"
-  resolved "https://registry.yarnpkg.com/@volar/shared/-/shared-0.39.4.tgz#cad5dfe0e21ccb6148419c3ddc54a8a3a2027815"
-  integrity sha512-HjA/fYBIcvSmQqD3oYwmuqVy8lz2q0dm9n9RyzuRuZ3mguCue1NthS7pjOtZTD+D3PixztOFBIgbxU8PLb/Nqw==
+"@volar/shared@0.39.5":
+  version "0.39.5"
+  resolved "https://registry.yarnpkg.com/@volar/shared/-/shared-0.39.5.tgz#d888ec1a41d433e01a8d507027a32fd7e536159b"
+  integrity sha512-aj2N8wkPdv1qQZ+jk2YzMwm1ZBvsQj0SDJnRKjoWTA6yGTzXxHKU6s3Q/7sAsVKgb0oTDcjjqNSMKj+b6Eb1DQ==
   dependencies:
     upath "^2.0.1"
     vscode-languageserver-protocol "^3.17.2"
     vscode-languageserver-textdocument "^1.0.5"
     vscode-uri "^3.0.3"
 
-"@volar/vue-language-service-types@0.39.4":
-  version "0.39.4"
-  resolved "https://registry.yarnpkg.com/@volar/vue-language-service-types/-/vue-language-service-types-0.39.4.tgz#644a06d39b50cb36d1de20ae9abeb610cf39bb25"
-  integrity sha512-/fm5cehe8EpN4HWoj5eWTCD1A6loh6cJLjvGKheolctlE8qpcJvXUydUiE7OpOBreM/Sc4wFA1K6BSBjzbXZDg==
+"@volar/vue-language-service-types@0.39.5":
+  version "0.39.5"
+  resolved "https://registry.yarnpkg.com/@volar/vue-language-service-types/-/vue-language-service-types-0.39.5.tgz#05f5c63dc0b5a09190dd58fbd7ac28b71ae7be93"
+  integrity sha512-LHFRs4qaF7PD3ciX64SNFAn3vPZvIfkBhP/CLQicnFAQzQKC/eXFotxmS9qmIlxjmarvng0uppoJaEzp6BsjkA==
   dependencies:
     vscode-languageserver-protocol "^3.17.2"
     vscode-languageserver-textdocument "^1.0.5"
