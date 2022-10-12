@@ -36,6 +36,7 @@
     "semi": true
   },
   "devDependencies": {
+    "@babel/types": "^7.19.4",
     "@types/node": "^16.11.56",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
