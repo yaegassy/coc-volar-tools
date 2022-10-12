@@ -1,9 +1,9 @@
 import * as preview from '@volar/preview';
-import * as shared from '@volar/shared';
 import { parse, SFCParseResult } from '@vue/compiler-sfc';
 import * as coc from 'coc.nvim';
 import * as fs from 'fs';
 import * as path from 'path';
+import { getLocalHostAvaliablePort } from '../utils/http';
 
 export async function activate(context: coc.ExtensionContext) {
   let ws: ReturnType<typeof preview.createPreviewConnection> | undefined;
@@ -168,7 +168,7 @@ export async function activate(context: coc.ExtensionContext) {
   }
 
   async function startPreviewServer(viteDir: string, type: 'vite' | 'nuxt') {
-    const port = await shared.getLocalHostAvaliablePort(coc.workspace.getConfiguration('volar').get('preview.port')!);
+    const port = await getLocalHostAvaliablePort(coc.workspace.getConfiguration('volar').get('preview.port')!);
     const terminal = await coc.window.createTerminal({ name: 'volar-preview:' + port });
     const viteProxyPath =
       type === 'vite'
