@@ -94,7 +94,7 @@
   "dependencies": {
     "@volar/preview": "^1.0.5",
     "@volar/shared": "1.0.5",
-    "@vue/compiler-sfc": "^3.2.37",
-    "@vue/reactivity": "^3.2.37"
+    "@vue/compiler-sfc": "^3.2.40",
+    "@vue/reactivity": "^3.2.40"
   }
 }
