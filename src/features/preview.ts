@@ -148,11 +148,11 @@ export async function activate(context: coc.ExtensionContext) {
   async function handleGoToCode(
     fileName: string,
     range: [number, number],
-    cancleToken: { readonly isCancelled: boolean }
+    cancelToken: { readonly isCancelled: boolean }
   ) {
     const doc = await coc.workspace.openTextDocument(fileName);
 
-    if (cancleToken.isCancelled) return;
+    if (cancelToken.isCancelled) return;
 
     const editor = coc.window.activeTextEditor;
     if (editor) {
