@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@babel/types": "^7.19.4",
-    "@types/node": "^16.11.65",
+    "@types/node": "^18.11.17",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "coc.nvim": "^0.0.82",
