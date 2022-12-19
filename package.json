@@ -93,7 +93,7 @@
     ]
   },
   "dependencies": {
-    "@volar/preview": "^1.0.5",
+    "@volar/preview": "^1.0.14",
     "@vue/compiler-sfc": "^3.2.45",
     "@vue/reactivity": "^3.2.45"
   }
