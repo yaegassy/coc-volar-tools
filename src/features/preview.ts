@@ -81,7 +81,7 @@ export async function activate(context: coc.ExtensionContext) {
   context.subscriptions.push(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     coc.workspace.onDidChangeTextDocument((e) => {
-      if (coc.window.activeTextEditor) {
+      if (coc.window.activeTextEditor?.document.uri === e.textDocument.uri) {
         updateSelectionHighlights(coc.window.activeTextEditor);
       }
     })
@@ -89,7 +89,7 @@ export async function activate(context: coc.ExtensionContext) {
   context.subscriptions.push(
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     coc.workspace.onDidSaveTextDocument((e) => {
-      if (coc.window.activeTextEditor) {
+      if (coc.window.activeTextEditor?.document.uri === e.uri) {
         updateSelectionHighlights(coc.window.activeTextEditor);
       }
     })
